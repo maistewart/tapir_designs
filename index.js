@@ -5,19 +5,21 @@ $(document).ready(function(){
     $(window).scroll(function() {
         var value = $(this).scrollTop();
         if (value > 0) {
+
             $("#logowrap").fadeOut(500);
-            $("ul#nav li a").stop().animate({height: 60}, "slow");
+            $("ul#nav li a.para").stop().animate({height: 60}, "slow");
             $("#headerwrap").stop().animate({height: 70}, "slow");
             $("#headerbase").slideUp("slow");
             $("#logosmall").fadeIn(1000);
+
+
             /*$(".link").css("line-height","70");*/
             /*$("#headerwrap").fadeTo("slow",0.7);*/
         }
         else {
             $("#logowrap").fadeIn(500);
-            $("ul#nav li a").stop().animate({height: 90}, "slow");
             $("#headerwrap").stop().animate({height:100},"slow");
-
+            $("ul#nav li a.para").stop().animate({height: 90}, "slow");
             $("#headerbase").slideDown("slow");
             $("#logosmall").fadeOut(1000);
             /*$(".link").css("line-height","90");*/
@@ -158,4 +160,20 @@ function startSlider() {
             image.src = "img/bulboff.png"
         }
     }
+
+    $("li#serviceslink a").hover(function(){
+        $("ul.sub1").stop().slideDown("slow");
+
+    },function(){
+        $("ul.sub1").stop().slideUp("slow");
+
+    });
+
+    $("a#client1").hover(function(){
+        $("img#screenshot").css("display","block");
+
+    },function(){
+        $("img#screenshot").css("display","none");
+
+    });
 });

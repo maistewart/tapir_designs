@@ -9,6 +9,31 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '{794217763935100}',
+            xfbml      : true,
+            version    : 'v2.0'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=794217763935100&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <header>
     <a href="#" id="logosmall">
         <img id="small" src="img/logosmall.png">
@@ -21,18 +46,19 @@
 
     <div id="headerwrap"></div>
     <ul id="nav">
-        <li class="par"><a class="para" href="#container3" id="about" title="about"><span class="link">ABOUT</span></a></li>
-        <li class="par"><a class="para" href="#" title="Portfolio" id="portfoliolink"><span class="link">PORTFOLIO</span></a></li>
-        <li class="par" id="serviceslink"><a class="para" href="#container2" title="Services" id="serviceslink"><span class="link">SERVICES</span></a>
+        <li class="par" id="about"><a class="para" href="index.html#container3"  title="About"><span class="link">ABOUT</span></a></li>
+        <li class="par"id="portfoliolink"><a class="para" href="portfolio.html" title="Portfolio" ><span class="link">PORTFOLIO</span></a></li>
+        <li class="par" id="serviceslink"><a class="para" href="index.html#container2" title="Services" ><span class="link">SERVICES</span></a>
             <ul class="sub1" id="servesub">
-                <li><a href="#"><span class="alignlink">WEBSITE DESIGN</span></a></li>
+                <li id="ds"><a href="#" id="dsgn"><span class="alignlink">WEBSITE DESIGN</span></a></li>
                 <li><a href="#"><span class="alignlink">WEBSITE REDESIGN</span></a></li>
                 <li><a href="#"><span class="alignlink">WEBSITE MAINTENANCE</span></a></li>
                 <li><a href="#"><span class="alignlink">LOGO DESIGN</span></a></li>
             </ul>
         </li>
-        <li class="par"><a class="para" href="#" title="Contact Us" id="contactlink"><span class="link">CONTACT US</span></a></li>
+        <li class="par" id="contactlink"><a class="para" href="contact.html" title="Contact Us" ><span class="link">CONTACT US</span></a></li>
     </ul>
+
     <div id="headerbase">
         <ul id="social">
             <li class="parent"><a href="#"class="imghov"><img  src="img/FB-logo.png"></a></li>
@@ -61,7 +87,7 @@
             <div class="descrip" id="descrip1">
                 <h2>Web Development & Design Services</h2>
                 <p class="descriptext" id="build">We build unique, professional websites to promote your business or project.</p>
-                <a id="quote" href="#"><p class="buttons">Get a Free Quote</p></a>
+                <a id="quote" href="contact.html"><p class="buttons">Get a Free Quote</p></a>
             </div>
         </div>
     </div>
@@ -125,7 +151,7 @@
         <img id="palette" src="img/pencils.png"> <!-- Colour Pencils-3 David Blaikie-->
     </div>
     <div id="startup">
-        <img id="plant" src="img/plant.png">
+        <img id="plant" src="img/plant.png"> <!--JARCreative-->
         <div class="exp" >
             <h3 class="s3">StartUp Friendly</h3>
             <ul class="list1">
@@ -158,10 +184,12 @@
            <div class="align" id="frontend">
                <p id="fe"> FRONT END</p>
                <p class="appear" id="frontchild">Front end developers make your site attractive and professional.</p>
+               <p id="weare">We are a small but dedicated team of front end and back end web developers</p>
+
            </div>
         </div>
         <div id="centerimg">
-            <img id="anatomy" src="img/tapiranat.png">
+            <img id="anatomy" src="img/tapiranat.png"> <!--Malayan Tapir Tapirus at Louisville Zoo by Trisha Shears-->
         </div>
         <div class="front">
             <div class="align" id="backend">
@@ -170,12 +198,17 @@
             </div>
         </div>
     </div>
-    <p id="weare">We are a small but dedicated team of front end and back end web developers</p>
+  <!--  <p id="weare">We are a small but dedicated team of front end and back end web developers</p>-->
+</div>
+
+<div id="plugin">
+
+    <div class="fb-comments" data-href="http://www.tapirdesigns.com/" data-width="800" data-numposts="5" data-colorscheme="dark"></div>
 </div>
 <footer id="footer">
     <img id="tap" src="img/bulboff.png">
     <div id="footcontact">
-             <h5 >Contact Us</h5>
+             <a href="contact.html" id="h5a"><h5 >Contact Us</h5></a>
         <div id="cont">
             <p>201.953.4462</p>
             <a href="#">maistewart@tapirdesigns.com</a>
